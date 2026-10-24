@@ -203,7 +203,9 @@ export default function AboutUs() {
                         strokeLinejoin="round"
                       />
                     </svg>
-                  ))}
+                  ))}i !== stats.length - 1
+  ? "min-[900px]:border-r min-[900px]:border-white/15"
+  : ""
                 </span>
               </span>
             </Link>
@@ -211,13 +213,13 @@ export default function AboutUs() {
         </div>
 
         {/* ---------- Stats bar ---------- */}
-        <div className="grid grid-cols-2 gap-y-6 overflow-hidden rounded-2xl border border-white/50 bg-white/[0.04] p-5 backdrop-blur-sm sm:p-7 min-[900px]:grid-cols-4 lg:p-8">
+        <div className="grid grid-cols-1 gap-y-6 overflow-hidden rounded-2xl border border-white/50 bg-white/[0.04] p-5 backdrop-blur-sm sm:p-7 min-[900px]:grid-cols-4 lg:p-8">
           {stats.map((s, i) => (
             <div
               key={s.title}
               className={`relative flex flex-col items-center gap-4 px-3 py-4 text-center sm:px-5 lg:px-4 xl:px-8 ${
                 i !== stats.length - 1
-                  ? "min-[900px]:border-r min-[900px]:border-white/15"
+                  ? "border-b border-white/15 min-[900px]:border-b-0 min-[900px]:border-r"
                   : ""
               }`}
             >
